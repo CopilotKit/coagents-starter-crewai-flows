@@ -18,7 +18,7 @@ class AgentState(CopilotKitState):
     the CopilotKitState fields. We're also adding a custom field, `language`,
     which will be used to set the language of the agent.
     """
-    language: Literal["english", "spanish"] = "english"
+    proverbs: list[str] = []
     # your_custom_agent_state: str = ""
 
 GET_WEATHER_TOOL = {
@@ -45,7 +45,7 @@ tools = [
 ]
 
 tool_handlers = {
-    "get_weather": lambda args: f"The weather for {args['location']} is 70 degrees."
+    "get_weather": lambda args: f"The weather for {args['location']} is 70 degrees, clear skies, 45% humidity, 5 mph wind, and feels like 72 degrees."
     # your tool handler here
 }
 
