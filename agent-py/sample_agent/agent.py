@@ -19,6 +19,7 @@ class AgentState(CopilotKitState):
     which will be used to set the language of the agent.
     """
     proverbs: list[str] = []
+    language: str = "English"
     # your_custom_agent_state: str = ""
 
 GET_WEATHER_TOOL = {
