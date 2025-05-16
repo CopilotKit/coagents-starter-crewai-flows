@@ -19,7 +19,6 @@ class AgentState(CopilotKitState):
     which will be used to set the language of the agent.
     """
     proverbs: list[str] = []
-    language: str = "English"
     # your_custom_agent_state: str = ""
 
 GET_WEATHER_TOOL = {
@@ -74,7 +73,7 @@ class SampleAgentFlow(Flow[AgentState]):
         For more about the ReAct design pattern, see: 
         https://www.perplexity.ai/search/react-agents-NcXLQhreS0WDzpVaS4m9Cg
         """
-        system_prompt = f"You are a helpful assistant. Talk in {self.state.language}."
+        system_prompt = f"You are a helpful assistant"
 
         # 1. Run the model and stream the response
         #    Note: In order to stream the response, wrap the completion call in
